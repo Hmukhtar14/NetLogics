@@ -1,0 +1,39 @@
+Name: Items
+Type: FolderType
+Children:
+- Name: RSLogix500_TagImporter
+  Type: ObjectLibraryItem
+  Description: {"LocaleId":"","Text":"DESCRIPTION: \nThis DesignTime Netlogic scipt allows for importing RSLogix500 format tags from a CSV file and creates corresponding MicroController tags in a FactoryTalk Optix project. Each CSV row's first column is treated as the SLC/MicroLogix symbol (e.g., \"I:1/0\", \"T:2\") and is used as the tag's SymbolName. The First column will be used for Symbol and Symbol name. The Fourth Column will be used for the Description. The CSV Must be exported using RSLogix 500 (Tool > Database > ASCII Export > CSV Tab > Ok) \nThe script maps the datatypes (I/O/B/S/T/C/F/N) to OPC UA data types and creates folder organization under the MicroController driver's Tags folder.\n\nSETUP:\nRequired Variables (on the NetLogic):\nCsvPath (ResourceUri): Path to the CSV file to import. (Must be exported through RSLogix 500)\nMicroControllerDriver (NodeId): Map to the Driver under the CommDriver folder\nMicroControllerStation (NodeId): Map to the Station under the Driver in the CommDriver folder\n\nNOTE:\nIn order to access Timers or Counters bits, new tags must be created and the Symbol should be the Timer/Counter with the bit specified after a period (T4:1.DN, T4:0.PRE, etc)\nExecuting the Import method Twice will not result in the loss of existing or previously imported tags, only new tags will be imported/Created.\n\n\n"}
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "5db05edc7118752cbf93196e1ac68840"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 2
+  - Name: RSLogix500_TagImporter
+    Id: g=b61e32483dcce7da9ad8aa6a75e95da5
+    Supertype: NetLogic
+    ReferenceType: HasComponent
+    Children:
+    - Name: BehaviourStartPriority
+      Type: BehaviourStartPriorityVariableType
+      DataType: Byte
+      Value: 180
+    - Name: CsvPath
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Description: {"LocaleId":"en-US","Text":"Path to the PLC CSV Database Expor"}
+      Value: "file:///C:/Users/HMukhtar/OneDrive - Van Meter Inc/Desktop/MyDataTypes.CSV"
+    - Name: MicroControllerDriver
+      Type: BaseDataVariableType
+      DataType: NodeId
+      Value: {"IdType":2,"Id":"f25ade11af3571f7146a02cfc3a8561b","Namespace":4}
+    - Class: Method
+      Name: ImportTagsFromCSV
+    - Name: MicroControllerStation
+      Type: BaseDataVariableType
+      DataType: NodeId
+      Value: {"IdType":2,"Id":"a58b8ed9a47c2e515daf104c84191096","Namespace":4}
