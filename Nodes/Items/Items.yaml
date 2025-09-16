@@ -12,7 +12,7 @@ Children:
   - Name: LibraryItemVersion
     Type: BaseDataVariableType
     DataType: UInt32
-    Value: 2
+    Value: 3
   - Name: RSLogix500_TagImporter
     Id: g=b61e32483dcce7da9ad8aa6a75e95da5
     Supertype: NetLogic

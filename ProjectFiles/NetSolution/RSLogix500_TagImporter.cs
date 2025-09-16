@@ -153,7 +153,7 @@ public class RSLogix500_TagImporter : BaseNetLogic
                     if (intFolder != null)
                         parentFolder = intFolder;
                 }
-                else if (symbol.StartsWith("F") || symbol.IndexOf("FLOAT") >= 0)
+                else if (symbol.StartsWith("F"))
                 {
                     var floatFolder = GetOrCreateFolder(tagsFolder, "FloatFile");
                     if (floatFolder != null)
