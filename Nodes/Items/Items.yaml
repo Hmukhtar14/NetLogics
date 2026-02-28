@@ -13,27 +13,36 @@ Children:
     Type: BaseDataVariableType
     DataType: UInt32
     Value: 3
-  - Name: RSLogix500_TagImporter
-    Id: g=b61e32483dcce7da9ad8aa6a75e95da5
-    Supertype: NetLogic
-    ReferenceType: HasComponent
-    Children:
-    - Name: BehaviourStartPriority
-      Type: BehaviourStartPriorityVariableType
-      DataType: Byte
-      Value: 180
-    - Name: CsvPath
-      Type: BaseDataVariableType
-      DataType: ResourceUri
-      Description: {"LocaleId":"en-US","Text":"Path to the PLC CSV Database Expor"}
-      Value: "file:///C:/Users/HMukhtar/OneDrive - Van Meter Inc/Desktop/MyDataTypes.CSV"
-    - Name: MicroControllerDriver
-      Type: BaseDataVariableType
-      DataType: NodeId
-      Value: {"IdType":2,"Id":"f25ade11af3571f7146a02cfc3a8561b","Namespace":4}
-    - Class: Method
-      Name: ImportTagsFromCSV
-    - Name: MicroControllerStation
-      Type: BaseDataVariableType
-      DataType: NodeId
-      Value: {"IdType":2,"Id":"a58b8ed9a47c2e515daf104c84191096","Namespace":4}
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=b61e32483dcce7da9ad8aa6a75e95da5
+- Name: FromPlcToModel_UDTArray
+  Type: ObjectLibraryItem
+  Description: {"LocaleId":"","Text":"This script mirrors PLC tag structures (including nested objects and arrays) into a FactoryTalk Optix Model folder. \nIt reads configuration for the source node, target folder, an Object Type to be instantiated, and whether to delete existing tags, then recursively creates model objects and variables with dynamic links to the PLC source data.\n\nIf the script is ran for the first time, the Objects/Tags will be created. If it is ran for the second time, the Objects/Tags will be updated.\n\nTO USE:\nSimply populate the variables in the properties pane and look into the descrption of each variable for more info\n"}
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "a37edeed80d7dc8e35b35db797dc0a07"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=5ca17eccd78d2f3141a05a9baffaa251
+- Name: DataGridSynchronizer
+  Type: ObjectLibraryItem
+  Description: {"LocaleId":"","Text":"Description:\nThis script allows for querying a database table and populating a DataGrid with columns at runtime.\n\nPurpose:\nThis script was made to address the gap of ODBC databases lack of tables sync while offline, and the need of manual creation of tables and columns in order to be displayed in a datagrid.\n\nHow to use:\n1. Populate the pointer variables:\n       -  Database_Pointer → your Store (database)\n        - DataGrid_Pointer → your DataGrid \n\n2. Through a button or an event, Call the QueryOnStore method and pass the desired Table name as an argument in the Table Variable."}
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "3c9400047e0d80332ef8a7d596ecfb48"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=849e7a5ea9cb65fd8e24b5248d07b814

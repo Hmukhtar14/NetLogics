@@ -27,3 +27,5 @@ Children:
     Value: 8
 - Name: AlarmConfiguration
   Type: PropertyGroup
+- Name: RuntimeOptimization
+  Type: PropertyGroup

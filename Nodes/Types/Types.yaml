@@ -1,2 +1,95 @@
 Name: Types
 Type: FolderType
+Children:
+- Name: RSLogix500_TagImporter
+  Id: g=b61e32483dcce7da9ad8aa6a75e95da5
+  Supertype: NetLogic
+  ReferenceType: HasComponent
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Name: CsvPath
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Description: {"LocaleId":"en-US","Text":"Path to the PLC CSV Database Expor"}
+    Value: "file:///C:/Users/HMukhtar/OneDrive - Van Meter Inc/Desktop/MyDataTypes.CSV"
+  - Name: MicroControllerDriver
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"f25ade11af3571f7146a02cfc3a8561b","Namespace":4}
+  - Class: Method
+    Name: ImportTagsFromCSV
+  - Name: MicroControllerStation
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"a58b8ed9a47c2e515daf104c84191096","Namespace":4}
+- Name: FromPlcToModel_UDTArray
+  Id: g=5ca17eccd78d2f3141a05a9baffaa251
+  Supertype: NetLogic
+  ReferenceType: HasComponent
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: GenerateNodesIntoModel
+  - Name: StartingNodeToFetch
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"0c1007c4d0462ce23032f0148490cc12","Namespace":4}
+  - Name: TargetFolder
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"75cc4ece341ab9414328f5ddd1ee6ff8","Namespace":4}
+  - Name: TargetObjectType
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"fe090818953263b704578aecdcbc6b23","Namespace":4}
+  - Name: DeleteExistingTags
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+- Name: DataGridSynchronizer
+  Id: g=849e7a5ea9cb65fd8e24b5248d07b814
+  Supertype: NetLogic
+  ReferenceType: HasComponent
+  Children:
+  - Name: DataGrid_Pointer
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../DataGrid1@NodeId"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: Database_Pointer
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"0843b3ad086c1076bbfdcfdc0360fc33","Namespace":4}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/Store"
+  - Class: Method
+    Name: QueryOnStore
+    Children:
+    - Name: ns=0;InputArguments
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"tableName","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
