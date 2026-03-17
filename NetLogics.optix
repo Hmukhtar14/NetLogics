@@ -27,14 +27,14 @@ Project:
    Module: FTOptix.Store
    Version: 2.0
  Statistics:
-  TotalNodeCount: 44
-  Objects: 12
-  ObjectTypes: 3
-  Variables: 26
+  TotalNodeCount: 56
+  Objects: 13
+  ObjectTypes: 4
+  Variables: 34
   VariableTypes: 0
   DataTypes: 0
-  Methods: 3
-  References: 3
+  Methods: 5
+  References: 4
   ReferenceTypes: 0
   Files: 4
  Nodes:

@@ -93,3 +93,42 @@ Children:
       ValueRank: OneDimension
       ArrayDimensions: [0]
       Value: [{"TypeId":{"Id":296},"Body":{"Name":"tableName","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+- Name: CsvToGrid
+  Id: g=c7ba693f4df3c2843ab5880b45725c20
+  Supertype: NetLogic
+  ReferenceType: HasComponent
+  Children:
+  - Name: CsvFile
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=4;%PROJECTDIR%/Test.csv"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Optix_Sample_CsvToEditableDataGrid/Model/CsvFile"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: CsvSeparator
+    Type: BaseDataVariableType
+    DataType: String
+    Value: ";"
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/Optix_Sample_CsvToEditableDataGrid/Model/CsvSeparator"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Class: Method
+    Name: saveCSVfile
+  - Class: Method
+    Name: readCsvFile

@@ -46,3 +46,17 @@ Children:
   - Class: Reference
     Type: HasOwnedType
     Target: g=849e7a5ea9cb65fd8e24b5248d07b814
+- Name: CsvToGrid
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "1a6419ab5d0e2f81f0f9968a405d18bb"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=c7ba693f4df3c2843ab5880b45725c20
