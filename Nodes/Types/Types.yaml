@@ -178,3 +178,25 @@ Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
+- Name: FromPlcToModel_Optimized
+  Id: g=e1e8b86149670b35703c3f2017e6a1af
+  Supertype: NetLogic
+  ReferenceType: HasComponent
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Name: StartingNodeToFetch
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"03f62aa4d65b4f5c395308db3fc943d6","Namespace":4}
+  - Class: Method
+    Name: GenerateNodesIntoModel
+  - Name: TargetFolder
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"120e6d657c53e36c4baebae536ee4f99","Namespace":4}
+  - Name: DeleteExistingTags
+    Type: BaseDataVariableType
+    DataType: Boolean

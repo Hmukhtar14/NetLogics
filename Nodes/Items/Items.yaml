@@ -116,3 +116,18 @@ Children:
   - Class: Reference
     Type: HasOwnedType
     Target: g=e1d85caf262e9250dc98cc257de538a7
+- Name: FromPlcToModel_Optimized
+  Type: ObjectLibraryItem
+  Description: {"LocaleId":"","Text":"Optimized to handle large amounts of tags\n"}
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "0f82427237dbefdb95cbb16b161058be"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=e1e8b86149670b35703c3f2017e6a1af
