@@ -60,3 +60,45 @@ Children:
   - Class: Reference
     Type: HasOwnedType
     Target: g=c7ba693f4df3c2843ab5880b45725c20
+- Name: VariablesSimulator
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "a6d61618d832d0f1f974563827e9529d"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=3466259079793caaa492936f51a386e1
+- Name: TagsGenerator
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "9167918bfa0c4eb12a2e7f9e419c095b"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=427e0addd960b519c6c89fec0e8c667f
+- Name: TagsSimulator
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "ab5c98aea6eb74dcfccfa5246fd21d50"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=8a87c1fa24628ddeb7c6649607aa0ba7

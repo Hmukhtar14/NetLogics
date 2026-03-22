@@ -132,3 +132,36 @@ Children:
     Name: saveCSVfile
   - Class: Method
     Name: readCsvFile
+- Name: VariablesSimulator
+  Id: g=3466259079793caaa492936f51a386e1
+  Supertype: NetLogic
+  ReferenceType: HasComponent
+  Children:
+  - Name: Sine
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Cosine
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Ramp
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: RunSimulation
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+- Name: TagsGenerator
+  Id: g=427e0addd960b519c6c89fec0e8c667f
+  Supertype: NetLogic
+  ReferenceType: HasComponent
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: GenerateTags
+- Name: TagsSimulator
+  Id: g=8a87c1fa24628ddeb7c6649607aa0ba7
+  Supertype: NetLogic
+  ReferenceType: HasComponent
