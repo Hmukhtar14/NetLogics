@@ -102,3 +102,17 @@ Children:
   - Class: Reference
     Type: HasOwnedType
     Target: g=8a87c1fa24628ddeb7c6649607aa0ba7
+- Name: VariableSyncronizer
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "d0eb06ab7fadf7473ef888b5adaf6439"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=e1d85caf262e9250dc98cc257de538a7

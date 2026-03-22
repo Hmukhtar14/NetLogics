@@ -165,3 +165,16 @@ Children:
   Id: g=8a87c1fa24628ddeb7c6649607aa0ba7
   Supertype: NetLogic
   ReferenceType: HasComponent
+- Name: VariableSyncronizer
+  Id: g=e1d85caf262e9250dc98cc257de538a7
+  Supertype: NetLogic
+  ReferenceType: HasComponent
+  Children:
+  - Name: TagsToSync
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"5cf761c54a6d9576ec51031eb900c07e","Namespace":4}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
