@@ -131,3 +131,18 @@ Children:
   - Class: Reference
     Type: HasOwnedType
     Target: g=e1e8b86149670b35703c3f2017e6a1af
+- Name: TagImporterOptimizer
+  Type: ObjectLibraryItem
+  Description: {"LocaleId":"","Text":"The purpose of this script is to optimize which tags are being imported into the project.\n\nStart by pulling in all the tags from the controller > Build the Project > Run the Tag opimizer to remove unused tags from the imported tags. \n\nAll done by accessing and modifying the YAML files directly\n"}
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "f59ad65560d04f643e9ede232a9aeaf9"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=05dfc33421f501bb0a2be1cbf3bc1988

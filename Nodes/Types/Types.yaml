@@ -200,3 +200,41 @@ Children:
   - Name: DeleteExistingTags
     Type: BaseDataVariableType
     DataType: Boolean
+- Name: TagImporterOptimizer
+  Id: g=05dfc33421f501bb0a2be1cbf3bc1988
+  Supertype: NetLogic
+  ReferenceType: HasComponent
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: OptimizeImportedTags
+  - Name: TargetCommDriver
+    Type: NodePointer
+    DataType: NodeId
+    Description: {"LocaleId":"en-US","Text":"The CommDriver that the controller resides under"}
+    Value: {"IdType":2,"Id":"9857b6e82da8dc3839a0aa0e322f7173","Namespace":4}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: TargetStation
+    Type: NodePointer
+    DataType: NodeId
+    Description: {"LocaleId":"en-US","Text":"The target controller with the TagImporter"}
+    Value: {"IdType":2,"Id":"26baf849a4fb78c4130d2d2684096af3","Namespace":4}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: TargetTagsFolder
+    Type: NodePointer
+    DataType: NodeId
+    Description: {"LocaleId":"en-US","Text":"The specific target Tags folder, not the parent under the station directly (Controller Tags, Program Tags)"}
+    Value: {"IdType":2,"Id":"97e90dd62fc14a051f9cebadd6b43265","Namespace":4}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
