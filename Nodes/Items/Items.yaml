@@ -142,7 +142,21 @@ Children:
   - Name: LibraryItemVersion
     Type: BaseDataVariableType
     DataType: UInt32
-    Value: 1
+    Value: 2
   - Class: Reference
     Type: HasOwnedType
     Target: g=05dfc33421f501bb0a2be1cbf3bc1988
+- Name: DeviceSizingAnalyzer
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "f9dff53a5194e51072e7e9ff4c01dade"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=458212dc0d2237d745f5a99940f18b89

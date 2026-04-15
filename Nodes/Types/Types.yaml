@@ -215,7 +215,7 @@ Children:
     Type: NodePointer
     DataType: NodeId
     Description: {"LocaleId":"en-US","Text":"The CommDriver that the controller resides under"}
-    Value: {"IdType":2,"Id":"9857b6e82da8dc3839a0aa0e322f7173","Namespace":4}
+    Value: {"IdType":2,"Id":"9ca8751403b89639bd1187a8b001c907","Namespace":4}
     Children:
     - Name: Kind
       Type: PropertyType
@@ -224,7 +224,7 @@ Children:
     Type: NodePointer
     DataType: NodeId
     Description: {"LocaleId":"en-US","Text":"The target controller with the TagImporter"}
-    Value: {"IdType":2,"Id":"26baf849a4fb78c4130d2d2684096af3","Namespace":4}
+    Value: {"IdType":2,"Id":"b6056fda87dd5dcf5c8eafdd21c29067","Namespace":4}
     Children:
     - Name: Kind
       Type: PropertyType
@@ -233,8 +233,19 @@ Children:
     Type: NodePointer
     DataType: NodeId
     Description: {"LocaleId":"en-US","Text":"The specific target Tags folder, not the parent under the station directly (Controller Tags, Program Tags)"}
-    Value: {"IdType":2,"Id":"97e90dd62fc14a051f9cebadd6b43265","Namespace":4}
+    Value: {"IdType":2,"Id":"d35a72c4acf22b5908c304d9a1230158","Namespace":4}
     Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
+- Name: DeviceSizingAnalyzer
+  Id: g=458212dc0d2237d745f5a99940f18b89
+  Supertype: NetLogic
+  ReferenceType: HasComponent
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: GetItemsCount
