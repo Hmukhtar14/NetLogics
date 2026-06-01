@@ -160,3 +160,18 @@ Children:
   - Class: Reference
     Type: HasOwnedType
     Target: g=458212dc0d2237d745f5a99940f18b89
+- Name: UDTs_LinkGenerator
+  Type: ObjectLibraryItem
+  Description: {"LocaleId":"","Text":"Script to link UDT from PLC to Object in Optix that share the same name\n"}
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "6b3ac15f5c6ff4306a43806fb6ad9da1"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=f77c8b257962c9bb6e2bc42ec3c3a829

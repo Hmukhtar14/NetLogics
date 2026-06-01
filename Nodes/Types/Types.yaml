@@ -249,3 +249,16 @@ Children:
     Value: 180
   - Class: Method
     Name: GetItemsCount
+- Name: UDTs_LinkGenerator
+  Id: g=f77c8b257962c9bb6e2bc42ec3c3a829
+  Supertype: NetLogic
+  ReferenceType: HasComponent
+  Children:
+  - Name: BehaviourStartPriority
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Class: Method
+    Name: GenerateDynamicLinks
+  - Class: Method
+    Name: ClearAllDynamicLinks
