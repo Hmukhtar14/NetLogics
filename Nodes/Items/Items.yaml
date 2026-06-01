@@ -175,3 +175,62 @@ Children:
   - Class: Reference
     Type: HasOwnedType
     Target: g=f77c8b257962c9bb6e2bc42ec3c3a829
+- Name: Float_Tags
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "a0e1989003819d8f26d1b8775e2a098f"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Name: Float_Tags
+    Type: FolderType
+    Description: {"LocaleId":"en-US","Text":"Add the quantity of tags to be generated only. The tag simulator NetLogic will reference the qty from the generator NetLogic"}
+    Children:
+    - Name: Float_TagsGenerator
+      Type: NetLogic
+      Children:
+      - Name: BehaviourStartPriority
+        Type: BehaviourStartPriorityVariableType
+        DataType: Byte
+        Value: 180
+      - Name: NumberOfTags
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 80000
+      - Class: Method
+        Name: GenerateTags
+    - Name: Float_TagsSimulator
+      Type: NetLogic
+      Children:
+      - Name: NumberOfTags
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 600000
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../Float_TagsGenerator/NumberOfTags"
+          Children:
+          - Name: Mode
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            Value: 2
+- Name: VariableSyncronizer_ContainsNumber
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "965343ee8f0ded86060bd1408bde3030"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=20e3364fead504a928e4b6c85c5964d7

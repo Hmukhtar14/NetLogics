@@ -262,3 +262,16 @@ Children:
     Name: GenerateDynamicLinks
   - Class: Method
     Name: ClearAllDynamicLinks
+- Name: VariableSyncronizer_ContainsNumber
+  Id: g=20e3364fead504a928e4b6c85c5964d7
+  Supertype: NetLogic
+  ReferenceType: HasComponent
+  Children:
+  - Name: TagsToSync
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"5a50b85607396bd8f232bc1f6308447f","Namespace":4}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
