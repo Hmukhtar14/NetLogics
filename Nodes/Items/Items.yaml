@@ -234,3 +234,42 @@ Children:
   - Class: Reference
     Type: HasOwnedType
     Target: g=20e3364fead504a928e4b6c85c5964d7
+- Name: OPCUABackgroundSynchronizer
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "d083cde12f9aa4b4674627d3d947717a"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Class: Reference
+    Type: HasOwnedType
+    Target: g=78274be982df39f9852da7f147dcbc3b
+- Name: LinkGeneratorScripts
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "28bfc629b45492ed9175b14d5dc56594"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Name: LinkGeneratorScripts
+    Type: FolderType
+    Children:
+    - Name: UDTs_LinkGenerator
+      Type: NetLogic
+      Children:
+      - Name: BehaviourStartPriority
+        Type: BehaviourStartPriorityVariableType
+        DataType: Byte
+        Value: 180
+      - Class: Method
+        Name: ClearAllDynamicLinks
+      - Class: Method
+        Name: GenerateDynamicLinks

@@ -275,3 +275,7 @@ Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
+- Name: OPCUABackgroundSynchronizer
+  Id: g=78274be982df39f9852da7f147dcbc3b
+  Supertype: NetLogic
+  ReferenceType: HasComponent
