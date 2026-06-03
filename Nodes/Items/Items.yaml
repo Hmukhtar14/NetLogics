@@ -273,3 +273,19 @@ Children:
         Name: ClearAllDynamicLinks
       - Class: Method
         Name: GenerateDynamicLinks
+- Name: VariableSynchronizer
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "d828e3d53883995516a8b687638ea2a1"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Name: VariableSynchronizer
+    Type: FolderType
+    Children:
+    - Name: OPCUABackgroundSynchronizer
+      Type: NetLogic
